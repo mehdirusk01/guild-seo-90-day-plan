@@ -138,11 +138,40 @@ td{padding:13px 12px 13px 0;border-bottom:1px solid var(--line);vertical-align:t
 footer{border-top:1px solid var(--line);font-size:13.5px;color:var(--quiet)}
 footer .src{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px}
 .note{font-size:13px;color:var(--quiet);margin-top:12px}
+/* context */
+.hidden{border-left:4px solid var(--red);background:var(--card);border-radius:0 14px 14px 0;padding:22px 26px;font-size:clamp(18px,2vw,21px);line-height:1.45;max-width:62em;margin:20px 0 30px}
+.hidden b{color:var(--red)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5em,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.fact{background:var(--card);padding:18px}
+.fact b{display:block;font:700 26px/1.1 'Inter Tight',sans-serif;letter-spacing:-.02em}
+.fact span{font-size:14px;color:var(--quiet)}
+.srcline{font-size:13px;color:var(--quiet);margin-top:10px}
+/* landscape */
+.us td:first-child{font-weight:600}
+tr.us td{background:var(--red-soft)}
+/* checklist */
+.check{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}
+.check div{border-top:3px solid var(--ink);padding-top:14px}
+.check h3{font-size:18px;margin-bottom:10px}
+.check ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.check li{font-size:15px;display:grid;grid-template-columns:20px minmax(0,1fr);gap:6px}
+.check li::before{content:"✓";color:var(--red);font-weight:700}
+/* rhythm */
+.rhythm{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:10px;position:relative}
+.beat{padding:22px 18px 0 0;border-top:3px solid var(--line);position:relative}
+.beat::before{content:"";position:absolute;top:-9px;left:0;width:15px;height:15px;border-radius:50%;background:var(--bg);border:3px solid var(--red)}
+.beat b{display:block;font:600 18px 'Inter Tight',sans-serif;margin-bottom:6px}
+.beat p{margin:0;font-size:15px;color:var(--quiet)}
+/* questions */
+.qs{counter-reset:q;margin:22px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 36px}
+.qs li{counter-increment:q;display:grid;grid-template-columns:2.2em minmax(0,1fr);font-size:16px}
+.qs li::before{content:counter(q);font:700 22px 'Inter Tight',sans-serif;color:var(--red)}
+.edu{font-size:15px;color:var(--quiet);margin-top:14px}
 /* reveal */
 .js .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
 .js .rv.in-view{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}.js .rv{opacity:1;transform:none}}
-@media(max-width:900px){.door-wrap,.score,.two,.about{grid-template-columns:minmax(0,1fr)}.links{display:none}nav .btn{margin-left:auto}}
+@media(max-width:900px){.check{grid-template-columns:minmax(0,1fr)}.rhythm{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:28px}.qs{grid-template-columns:minmax(0,1fr)}.door-wrap,.score,.two,.about{grid-template-columns:minmax(0,1fr)}.links{display:none}nav .btn{margin-left:auto}}
 @media(max-width:600px){.tools{grid-template-columns:minmax(0,1fr)}.panel{padding:18px;gap:12px}.panel .pt{font-size:18px}.door{border-width:6px}.row{grid-template-columns:1.8em 6em minmax(0,1fr) 2.6em;gap:8px}table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}.stack td{display:flex;justify-content:space-between;gap:12px;border:0;padding:3px 0;text-align:right}.stack td::before{content:attr(data-l);color:var(--quiet);text-align:left;flex:none;max-width:45%}}
 </style>
 </head>
@@ -153,11 +182,14 @@ footer .src{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px}
   <div class="in">
     <a class="brand" href="#top"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>Mehdi El Asbat</a>
     <div class="links">
+      <a href="#context">Problem</a>
       <a href="#plan">90-day plan</a>
       <a href="#problem">Why now</a>
+      <a href="#landscape">Market</a>
       <a href="#approach">Approach</a>
       <a href="#score">Priority Score</a>
       <a href="#measure">KPIs</a>
+      <a href="#questions">Questions</a>
       <a href="#me">About me</a>
     </div>
     <a class="btn red" href="Guild-Garage-Group-90-Day-Local-SEO-Plan.pdf" target="_blank" rel="noopener">Download PDF</a>
@@ -175,6 +207,22 @@ footer .src{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px}
     </div>
   </div>
 </header>
+
+<section class="band" id="context" style="padding-bottom:0">
+  <div class="in">
+    <h2 class="rv">Guild today, and the problem behind this role</h2>
+    <p class="hidden rv">Guild needs its ~30 local brands to win homeowners on Google, <b>but</b> each brand's site, profiles and reviews were built separately before joining Guild, <b>so</b> you're hiring someone to set one local SEO standard and turn visibility into booked jobs.</p>
+    <div class="facts rv">
+      <div class="fact"><b>2024</b><span>Guild launched as an alliance of local garage door companies</span></div>
+      <div class="fact"><b>32</b><span>partnerships signed by September 2026</span></div>
+      <div class="fact"><b>500+</b><span>certified technicians (April 2026)</span></div>
+      <div class="fact"><b>30</b><span>states covered (April 2026)</span></div>
+      <div class="fact"><b>Oak Hill</b><span>Capital, investor since April 2026</span></div>
+      <div class="fact"><b>ServiceTitan</b><span>required for every partner brand</span></div>
+    </div>
+    <p class="srcline rv">Sources: <a href="https://www.prnewswire.com/news-releases/oak-hill-capital-partners-with-guild-garage-group-302731713.html" target="_blank" rel="noopener">Oak Hill release</a>, <a href="https://www.webull.ca/news-detail/15502295807697920" target="_blank" rel="noopener">Prutch's release</a>, <a href="https://www.servicetitan.com/blog/success-story-guild-garage-group" target="_blank" rel="noopener">ServiceTitan case study</a>. Partner owners keep unit-level ownership, which is why the standard has to be adopted, not imposed.</p>
+  </div>
+</section>
 
 <section class="band" id="plan" aria-label="The first 90 days">
   <div class="in">
@@ -205,6 +253,24 @@ footer .src{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px}
   </div>
 </section>
 
+<section class="band" id="landscape">
+  <div class="in">
+    <h2 class="rv">Who Guild's brands compete with on Google</h2>
+    <p class="sub rv">Guild's strength is real, well-rated local names. Its gap is consistency: the national players look the same in every city.</p>
+    <div class="scroll rv">
+      <table class="stack">
+        <thead><tr><th>Player</th><th>Model</th><th>Footprint</th><th>What it means for local search</th></tr></thead>
+        <tbody>
+          <tr class="us"><td data-l="Player">Guild Garage Group</td><td data-l="Model">Partnership of local brands</td><td data-l="Footprint">~30 brands, 30 states</td><td data-l="Meaning">Trusted local names, but no shared standard yet</td></tr>
+          <tr><td data-l="Player"><a href="https://a1garage.com/" target="_blank" rel="noopener">A1 Garage Door Service</a></td><td data-l="Model">One national brand</td><td data-l="Footprint">54+ locations, 20 states listed</td><td data-l="Meaning">Proof at scale: 140,000+ reviews claimed</td></tr>
+          <tr><td data-l="Player"><a href="https://www.precisiondoor.net/why-us" target="_blank" rel="noopener">Precision Garage Door Service</a></td><td data-l="Model">Franchise network (Neighborly)</td><td data-l="Footprint">Network since 1985</td><td data-l="Meaning">Same national brand on every local page</td></tr>
+          <tr><td data-l="Player">Fake listings</td><td data-l="Model">Lead-generation networks</td><td data-l="Footprint">Widespread in this category</td><td data-l="Meaning">Verified, real brands can win on trust</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
 <section class="band" id="approach">
   <div class="in">
     <h2 class="rv">Four tools, one standard</h2>
@@ -215,8 +281,27 @@ footer .src{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px}
       <div class="tool rv"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 5l3.8 7.7 8.5 1.2-6.1 6 1.4 8.4L18 24.3l-7.6 4 1.4-8.4-6.1-6 8.5-1.2z" stroke-linejoin="round"/></svg><h3>Compliant review engine</h3><p>A request after every completed job, replies within 48 hours. No incentives and no filtering of unhappy customers, as the <a href="https://www.federalregister.gov/documents/2024/08/22/2024-18519/trade-regulation-rule-on-the-use-of-consumer-reviews-and-testimonials" target="_blank" rel="noopener">FTC rule</a> in force since October 21, 2024 requires.</p></div>
       <div class="tool rv"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="6" width="26" height="24" rx="3"/><path d="M5 13h26M12 19h12M12 24h8" stroke-linecap="round"/></svg><h3>Agency scorecard</h3><p>Monthly, per brand: work shipped vs. plan, map-pack rank on top service and city searches, organic leads and booked jobs.</p></div>
     </div>
+    <h2 class="rv" style="margin-top:56px;font-size:clamp(22px,2.6vw,28px)">What the Local SEO Standard v1 checks</h2>
+    <div class="check">
+      <div class="rv"><h3>Google Business Profile</h3><ul><li>Verified, with Guild holding owner access</li><li>Correct primary and secondary categories</li><li>Services and service areas complete</li><li>Real photos of trucks, team and jobs, refreshed monthly</li><li>Every review answered within 48 hours</li></ul></div>
+      <div class="rv"><h3>Listings</h3><ul><li>Same name, address and phone everywhere</li><li>Apple Business Connect, Bing Places, Yelp, BBB, Angi, Facebook</li><li>Duplicate listings found and merged</li><li>Accuracy audited every quarter</li></ul></div>
+      <div class="rv"><h3>Website and tracking</h3><ul><li>One page per core service and per city served</li><li>LocalBusiness schema on every location page</li><li>Fast on mobile, with click-to-call above the fold</li><li>GA4 events for calls and forms</li><li>Leads tied to ServiceTitan job source</li></ul></div>
+    </div>
   </div>
 </section>
+
+<section class="band" id="rhythm" style="padding-top:0">
+  <div class="in">
+    <h2 class="rv" style="font-size:clamp(22px,2.6vw,28px)">How I'd run it after day 90</h2>
+    <div class="rhythm">
+      <div class="beat rv"><b>Weekly</b><p>Agency stand-up on the priority brands: what shipped, what's blocked.</p></div>
+      <div class="beat rv"><b>Monthly</b><p>Scorecard per brand to the CMO: leads, booked jobs, rank, reviews.</p></div>
+      <div class="beat rv"><b>Quarterly</b><p>Re-run the Priority Score and release the next version of the standard.</p></div>
+      <div class="beat rv"><b>Every new deal</b><p>Onboarding checklist completed within 30 days of the partnership.</p></div>
+    </div>
+  </div>
+</section>
+
 
 <section class="band alt" id="score">
   <div class="in">
@@ -265,11 +350,25 @@ footer .src{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px}
   </div>
 </section>
 
-<section class="band alt" id="me">
+<section class="band alt" id="questions">
+  <div class="in">
+    <h2 class="rv">Five questions I'd ask in my first week</h2>
+    <ol class="qs rv">
+      <li>Which brands does leadership already see as underperforming in search?</li>
+      <li>How is the SEO agency contracted today, and what does it report?</li>
+      <li>Does Guild hold owner access to every Google profile, or do brand owners?</li>
+      <li>How reliably is the ServiceTitan job source tagged across brands?</li>
+      <li>Which markets matter most for the next acquisitions?</li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" id="me">
   <div class="in about">
     <div class="rv">
       <h2>Why me</h2>
       <p>5+ years in web marketing on agency and advertiser sides. I led the SEO audit of HommeDeMetier.be, a Belgian platform for tradespeople, and grew organic leads 35% in 6 months for a local services client.</p>
+      <p class="edu">Final-year Master's in Business &amp; Digital Strategy (ESCEN), with degrees in e-commerce (Brussels) and UX/UI design (Lille). Currently in Boston.</p>
       <div class="skills"><span>Local SEO</span><span>Google Business Profiles</span><span>GA4</span><span>Search Console</span><span>Google Ads</span><span>Agency management</span><span>Automation (Make, Zapier, n8n)</span></div>
     </div>
     <div class="contact rv">
