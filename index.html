@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guild Local SEO Plan</title>
+<meta name="description" content="A 90-day local SEO plan for Guild Garage Group's ~30 brands, by Mehdi El Asbat.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE work: a proposal a CMO reads in two minutes, conclusion first
+   IDEA a sectional garage door: the 90 days are its three panels, phase 2 is the one that lifts
+   PICTURE the door itself, framed and ribbed, each panel carrying its phase and deliverables
+   COLOUR white ground, near-black ink, steel panels, one signal red for the phase that moves jobs
+   TYPE Inter Tight 600 for titles and figures, Inter for text
+   LAYOUT title and ask across the top, the door full width beneath; on a phone the panels stack their text */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#121518);--ink:light-dark(#121418,#eef1f4);--quiet:light-dark(#555c66,#a5adb7);--steel:light-dark(#d5dbe0,#2a3036);--steel-2:light-dark(#c3cad1,#232930);--rib:light-dark(rgba(255,255,255,.55),rgba(255,255,255,.05));--frame:light-dark(#121418,#3a424b);--red:light-dark(#d42016,#ff4a3d);--line:light-dark(#e3e6ea,#2b3138);--soft:light-dark(#f3f5f7,#1a1e22)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,sans-serif;overflow-x:clip}
+a{color:inherit;text-decoration-color:var(--red);text-underline-offset:3px}
+.band{padding:clamp(28px,4vw,56px) max(5vw,16px)}
+.in{max-width:1080px;margin:0 auto}
+h1,h2,.fig-n{font-family:'Inter Tight',Inter,sans-serif;letter-spacing:-.02em;line-height:1.05;margin:0}
+h1{font-size:clamp(32px,5vw,50px);font-weight:700;text-wrap:balance;max-width:20ch}
+h2{font-size:clamp(24px,3vw,30px);font-weight:600;margin-bottom:18px;text-wrap:balance}
+.by{color:var(--quiet);font-size:14px;margin:0 0 14px}
+.ask{font-size:18px;max-width:62ch;margin:16px 0 0}
+.top{padding-bottom:20px}
+.door-band{padding-top:12px}
+.door{border:10px solid var(--frame);border-bottom:0;border-radius:6px 6px 0 0;background:var(--frame);display:grid;gap:4px;padding:4px 4px 0}
+.panel{position:relative;background:var(--steel);display:grid;grid-template-columns:minmax(0,15em) minmax(0,1fr);gap:16px 28px;padding:22px 26px;box-shadow:inset 0 3px 0 var(--rib),inset 0 -3px 0 rgba(0,0,0,.12)}
+.panel.go{background-color:var(--red);color:#fff;box-shadow:inset 0 3px 0 rgba(255,255,255,.25),inset 0 -3px 0 rgba(0,0,0,.18)}
+.panel.go .days{color:#fff;opacity:.9}
+.panel h3{font-family:'Inter Tight',Inter,sans-serif;font-size:21px;margin:0;line-height:1.15}
+.days{font-size:14px;color:var(--quiet);margin-top:4px;font-weight:500}
+.panel ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 22px}
+.panel li{font-size:15px;line-height:1.4;padding-left:14px;position:relative}
+.panel li::before{content:"";position:absolute;left:0;top:.5em;width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.7}
+.floor{height:14px;background:var(--frame);border-radius:0 0 4px 4px;margin-top:-1px}
+.door-note{color:var(--quiet);font-size:14px;margin:12px 0 0}
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(14em,1fr));gap:20px}
+.fig-card{border-top:3px solid var(--ink);padding-top:14px}
+.fig-card.hot{border-top-color:var(--red)}
+.fig-n{font-size:clamp(38px,5vw,52px);font-weight:700;white-space:nowrap}
+.fig-card p{margin:8px 0 0;font-size:15px;color:var(--quiet)}
+.lead{font-size:18px;max-width:64ch;margin:0 0 26px}
+.alt{background:var(--soft)}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:20px 22px}
+.steps b{display:block;font-family:'Inter Tight',Inter,sans-serif;font-size:19px;margin-bottom:6px}
+.steps p{margin:0;font-size:15.5px}
+.two{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;align-items:start}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th{text-align:left;font-weight:600;font-size:13.5px;color:var(--quiet);padding:0 12px 10px 0;border-bottom:2px solid var(--ink)}
+td{padding:12px 12px 12px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.risks{margin:0;padding:0;list-style:none;display:grid;gap:14px}
+.risks li{padding-left:16px;border-left:3px solid var(--line)}
+.risks b{display:block}
+.me{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end}
+.me p{font-size:18px;max-width:60ch;margin:0}
+.note{font-size:13px;color:var(--quiet);margin-top:10px}
+footer{border-top:1px solid var(--line);font-size:13.5px;color:var(--quiet)}
+footer .src{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:6px}
+@media(prefers-reduced-motion:no-preference){.panel.go{animation:lift 1s .4s cubic-bezier(.2,.8,.2,1) both}@keyframes lift{from{transform:translateY(14px);opacity:.6}to{transform:none;opacity:1}}}
+@media(max-width:860px){.panel ul{grid-template-columns:minmax(0,1fr)}.two{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.panel{grid-template-columns:minmax(0,1fr);padding:18px}.steps{grid-template-columns:minmax(0,1fr)}.door{border-width:6px}.me{grid-template-columns:minmax(0,1fr)}table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}.stack td{display:flex;justify-content:space-between;gap:12px;border:0;padding:3px 0;text-align:right}.stack td::before{content:attr(data-l);color:var(--quiet);text-align:left;flex:none;max-width:45%}}
+</style>
+</head>
+<body>
+
+<header class="band top">
+  <div class="in">
+    <p class="by">Mehdi El Asbat · Application for SEO Manager, Guild Garage Group</p>
+    <h1>One local SEO standard for Guild's ~30 brands</h1>
+    <p class="ask">Each brand built its own site and Google profiles before joining Guild. My plan sets one standard, fixes first the brands where visibility adds the most booked jobs, and makes every new acquisition follow it from day one.</p>
+  </div>
+</header>
+
+<section class="band door-band" aria-label="The first 90 days">
+  <div class="in">
+    <div class="door" role="list">
+      <div class="panel" role="listitem">
+        <div><h3>1 · Audit and baseline</h3><div class="days">Days 1–30</div></div>
+        <ul><li>Audit every brand: profiles, listings, sites, reviews</li><li>Local SEO Standard v1 approved by the CMO</li><li>Agency scorecard agreed</li></ul>
+      </div>
+      <div class="panel go" role="listitem">
+        <div><h3>2 · Fix the top 5 brands</h3><div class="days">Days 31–60</div></div>
+        <ul><li>Priority Score ranks every brand</li><li>Standard applied to the top 5</li><li>Review requests live in ServiceTitan</li></ul>
+      </div>
+      <div class="panel" role="listitem">
+        <div><h3>3 · Scale and prove</h3><div class="days">Days 61–90</div></div>
+        <ul><li>Rollout plan for every brand</li><li>Checklist for every new acquisition</li><li>First scorecard to the CMO, by brand</li></ul>
+      </div>
+    </div>
+    <div class="floor" aria-hidden="true"></div>
+    <p class="door-note">Phase 2 is where booked jobs should move first.</p>
+  </div>
+</section>
+
+<section class="band" id="problem">
+  <div class="in">
+    <h2>Search is your cheapest channel, in a hostile category</h2>
+    <p class="lead">Your posting says organic search, Google Business Profiles and brand websites produce Guild's lowest-cost booked jobs. Three facts make getting them right harder, and more valuable.</p>
+    <div class="figs">
+      <div class="fig-card"><div class="fig-n">32</div><p>partnerships since 2024, 8 of them in 2026. Each arrives with its own site, listings and habits.</p></div>
+      <div class="fig-card hot"><div class="fig-n">87.6%</div><p>of garage door listings examined were removed by Google in a 2022 Sterling Sky study, the highest rate of any industry.</p></div>
+      <div class="fig-card"><div class="fig-n">140,000+</div><p>reviews claimed by rival A1 Garage Door Service across 54+ locations.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="proposal">
+  <div class="in">
+    <h2>Four tools, one standard</h2>
+    <ol class="steps">
+      <li><b>Local SEO Standard</b><p>One checklist every brand meets: Google profile, consistent listings across top directories, service and city pages, schema, and call and form tracking by brand.</p></li>
+      <li><b>Brand Priority Score</b><p>Gap to standard × local search demand × average job value, from ServiceTitan and GA4. Fix first where visibility adds the most booked jobs.</p></li>
+      <li><b>Compliant review engine</b><p>A request after every completed job, replies within 48 hours. No incentives and no filtering of unhappy customers, as the FTC rule in force since October 21, 2024 requires.</p></li>
+      <li><b>Agency scorecard</b><p>Monthly, per brand: work shipped vs. plan, map-pack rank on top service and city searches, organic leads and booked jobs.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" id="measure">
+  <div class="in two">
+    <div>
+      <h2>Measured on your KPIs</h2>
+      <div class="scroll">
+        <table class="stack">
+          <thead><tr><th>KPI</th><th>Data source</th><th>By day 90</th></tr></thead>
+          <tbody>
+            <tr><td data-l="KPI">Organic leads and booked jobs by brand</td><td data-l="Source">GA4 + ServiceTitan</td><td data-l="Day 90">Baseline set, trend for top 5</td></tr>
+            <tr><td data-l="KPI">Google profile visibility and actions</td><td data-l="Source">Profile performance</td><td data-l="Day 90">Up vs. baseline, top 5</td></tr>
+            <tr><td data-l="KPI">Average rating and review volume</td><td data-l="Source">Profile reviews</td><td data-l="Day 90">Requests live, volume up</td></tr>
+            <tr><td data-l="KPI">Listings accuracy</td><td data-l="Source">Listings audit</td><td data-l="Day 90">Top 5 match the standard</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <h2>What could go wrong</h2>
+      <ul class="risks">
+        <li><b>Built on public data only</b>I don't know your agency setup or brand numbers, so targets start from a baseline we set together.</li>
+        <li><b>Owners keep their autonomy</b>Partners retain unit-level ownership, so I'd co-write the standard with two brand leaders.</li>
+        <li><b>Profile edits carry risk</b>Google applies advanced verification to garage door companies, so I'd edit in small batches with proof ready.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="me">
+  <div class="in me">
+    <div>
+      <h2>Why me</h2>
+      <p>5+ years in web marketing on agency and advertiser sides: SEO, Google Ads, GA4 and Google Business Profiles. I led the SEO audit of HommeDeMetier.be, a Belgian platform for tradespeople, and grew organic leads 35% in 6 months for a local services client.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="band">
+  <div class="in">
+    Sources, checked November 2026:
+    <div class="src">
+      <a href="https://job-boards.greenhouse.io/gggli/jobs/4517364009">Job posting</a>
+      <a href="https://www.prnewswire.com/news-releases/oak-hill-capital-partners-with-guild-garage-group-302731713.html">Oak Hill release, Apr 2026</a>
+      <a href="https://www.webull.ca/news-detail/15502295807697920">Prutch's partnership, Sep 2026</a>
+      <a href="https://www.servicetitan.com/blog/success-story-guild-garage-group">ServiceTitan case study</a>
+      <a href="https://www.sterlingsky.ca/google-maps-spam-study/">Sterling Sky spam study</a>
+      <a href="https://www.dasma.com/wp-content/uploads/2023/09/GoogleandFTCTakeAction_Fall2023.pdf">DASMA, Fall 2023</a>
+      <a href="https://a1garage.com/">A1 Garage Door Service</a>
+      <a href="https://www.federalregister.gov/documents/2024/08/22/2024-18519/trade-regulation-rule-on-the-use-of-consumer-reviews-and-testimonials">FTC rule on reviews</a>
+    </div>
+    <p class="note">Independent proposal built from public information. Not affiliated with Guild Garage Group.</p>
+  </div>
+</footer>
+
+</body>
+</html>
